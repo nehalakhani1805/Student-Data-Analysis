@@ -1,0 +1,15 @@
+{% extends "users/base.html" %}
+{% block content %}
+    {% for s in st %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h3><a class="mr-2" href="#">{{ s.firstname }} {{ s.lastname }}</a></h3>
+            </div>
+            <h5><div class="article-title" >Phone: {{ s.phone }}</div></h5>
+            <h5><div class="article-title"  >Email: {{ s.email }}</div></h5>
+            <h5><div class="article-title">Keywords: {{ s.keywords }}</div></h5>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
